@@ -11,7 +11,7 @@
             </h3>
             <h5>TIEMPO DE CARGA: <strong>{{ tiempo_carga }}</strong></h5>
             <h5>CANTIDAD DE POKEMONES: <strong>{{ cantidad }}</strong></h5>
-        {% for pokemon in pokemones.values %}
+        {% for pokemon in pokemones %}
             <div class="col-6 col-sm-6">
                 <div class="form-group">
                     <input  value="{{ pokemon.nombre|upper }}">
