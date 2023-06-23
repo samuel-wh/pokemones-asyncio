@@ -7,25 +7,25 @@
 # Paso 3
 ## Crear corrutina para obtener una lista de pokemones con asyncio (Es necesario el parametro “session”) Ejemplo:
     async def get_pokemones(session):
-    url = <<endpoint>>
-    async with session.get(url) as resp:
-        response = await resp.json()
-        results = response.get(<<list_result>>)
-        return results
+        url = <<endpoint>>
+        async with session.get(url) as resp:
+            response = await resp.json()
+            results = response.get(<<list_result>>)
+            return results
 # Paso 4
 ## Crear una corrutina que obtenga la imagen y el nombre del pokemon en base al endpoint obtenido del pokemon (Es necesario el parametro “session” Ejemplo:
     async def get_imagen_pokemon(session, url):
-    async with session.get(url) as resp:
-        response_json = await resp.json()
-        sprite = response_json['sprites']
-        id = response_json['id']
-        nombre = response_json['name']
-        data = {
-            'imagen': sprite['front_default'],
-            'id': id,
-            'nombre': nombre,
-        }
-        return data
+        async with session.get(url) as resp:
+            response_json = await resp.json()
+            sprite = response_json['sprites']
+            id = response_json['id']
+            nombre = response_json['name']
+            data = {
+                'imagen': sprite['front_default'],
+                'id': id,
+                'nombre': nombre,
+            }
+            return data
 # Paso 5
 ## Crear vista para poder listar los pokemones con sus imagenes usando Asyncio. Importante importar librerias asyncio y aiohttp Ejemplo:
     import asyncio
