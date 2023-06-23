@@ -4,7 +4,7 @@
 # Paso 2
 ## En el entorno creado instalar dependencias
     pip install -r requirements.txt
-# Paso 2
+# Paso 3
 ## Crear corrutina para obtener una lista de pokemones con asyncio (Es necesario el parametro “session”) Ejemplo:
     async def get_pokemones(session):
     url = <<endpoint>>
